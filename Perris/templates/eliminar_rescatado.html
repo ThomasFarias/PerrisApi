@@ -1,0 +1,15 @@
+{%extends 'index.html'%}
+{%block eliminar_rescatado%}
+<form method="post">
+    
+{% csrf_token %}
+<h2>¿Desea eliminar al rescatado {{rescatado.nombre}} ?</h2>
+<center>
+        <img src="{{rescatado.foto.url}}" width="200"><br><br>
+        <button class="btn btn-primary" type="submit">Eliminar</button>
+        <a class="btn btn-primary" href="{% url 'rescatados' %}">Volver</a>
+</center>
+    
+
+</form>
+{% endblock %}

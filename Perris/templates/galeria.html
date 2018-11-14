@@ -1,0 +1,79 @@
+{%extends 'index.html'%}
+{% block galeria %}
+<div class="galeria">
+
+        <center><h1>RESCATADOS</h1></center><br>
+
+        <div class="cat">
+
+             
+        {% if rescatado  %}
+        
+        
+        {% for r in rescatado %}
+        <div class="resc">
+            
+           <center> <h3>{{r.nombre}}</h3></center>
+           {% if r.foto  %}
+        <img src="{{r.foto.url}}" width="250px" height="250px">
+         {% else  %}
+         no foto
+         {% endif  %}
+
+        </div>
+        {%endfor%}
+        
+        
+        
+            {% else %}
+            <center><h1> No hay rescatados</h1></center>
+           
+        {% endif %}
+        </div>
+
+      <center>  <h1>DISPONIBLES</h1><br></center>
+<div class="cat">
+{% if disponible  %}
+
+
+{% for d in disponible %}
+<div class="resc">
+   <center> <h3>{{d.nombre}}</h3></center>
+    {% if d.foto  %}
+<img src="{{d.foto.url}}" width="250px" height="250px">
+{% else  %}
+         no foto
+         {% endif  %}
+</div>
+{%endfor%}
+
+
+    {% else %}
+        <center><h1> No hay disponibles</h1></center>
+{% endif %}
+</div>
+<center><h1>ADOPTADOS</h1></center>
+{% if adoptado  %}
+<div class="cat">
+      
+{% for a in adoptado %}
+<div class="resc">
+    
+   <center> <h3>{{a.nombre}}</h3></center>
+   {% if a.foto  %}
+<img src="{{a.foto.url}}" width="250px" height="250px">
+{% else  %}
+         no foto
+{% endif  %}
+</div>
+{%endfor%}
+    
+
+    {% else %}
+    <center><h1> No hay adoptados</h1></center>
+{% endif %}
+</div>
+
+
+</div>
+{% endblock %}
