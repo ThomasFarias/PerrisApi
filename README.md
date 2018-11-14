@@ -1,2 +1,9 @@
-# PerrisApi
-Pagina responsive, progresiva usando API Ajax en django.
+# PerrisDjango
+
+Dependencias:
+
+Django Crispy Forms
+pip install django-crispy-forms
+
+Pillow
+pip install Pillow
