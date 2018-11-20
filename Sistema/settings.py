@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',
     'django.contrib.auth',
-    'Perris.apps.PerrisConfig',    
+    'Perris.apps.PerrisConfig',
+    'front.apps.FrontConfig', 
+    'rest_framework',  
 ]
 
 MIDDLEWARE = [

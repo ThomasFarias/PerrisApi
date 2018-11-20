@@ -9,6 +9,12 @@ from django.contrib.auth.models import User
 from django.views.generic import CreateView
 # Create your views here.
 
+
+
+
+
+
+"""
 class ClienteCreateView(CreateView):
     model = Cliente
     campos = ('run','nombre','apellido','telefono')
@@ -142,3 +148,4 @@ def salir(request):
 def adopcion_exitosa(request):
     active_tab = 'tab1'
     return render(request,"adopcion.html", {'active_tab':active_tab})
+"""

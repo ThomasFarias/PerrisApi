@@ -3,10 +3,11 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Fieldset, ButtonHolder, Submit, Div, HTML
 from django.contrib.auth.models import User
 from django.utils.safestring import mark_safe          
-from .models import Cliente,Rescatado
+from models import Cliente,Rescatado
 
 
 class FormRegistroCliente(forms.ModelForm):
+
 	run =forms.CharField(widget=forms.TextInput(),label="RUN")
 	password2 =forms.CharField(widget=forms.PasswordInput(),label="Confirmar contraseña")
 	fono_numero =forms.CharField(widget=forms.TextInput(),label="Telefono",required=False)
