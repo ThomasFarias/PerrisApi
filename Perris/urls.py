@@ -6,7 +6,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from . import views
 
 urlpatterns=[
-     url('backRestList',views.RescatadosView.as_view()),
+     url('backRescList',views.RescatadosView.as_view()),
 
 	
 ] #+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

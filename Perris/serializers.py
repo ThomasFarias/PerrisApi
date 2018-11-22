@@ -19,7 +19,8 @@ class ClienteSerializer(serializers.ModelSerializer):
 class RescatadoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Rescatado
-        fields = ('nombre',
+        fields = ('codigo',
+                    'nombre',
                   'raza','descripcion','estado','foto'
                  )
 

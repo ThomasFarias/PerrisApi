@@ -1,5 +1,5 @@
 from django.shortcuts import render, render_to_response
-from rest_framework.response import Response
+
 from django.template import loader,RequestContext
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
