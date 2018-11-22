@@ -33,8 +33,8 @@
 		{% endif %}
     
     
-    {% if request.user.is_authenticated and request.user.is_superuser %}
-   
+  <!-- {% if request.user.is_authenticated and request.user.is_superuser %} -->
+     
     <td>
     <a class="btn btn-primary" href="{% url 'modificar_rescatado' r.codigo %}"role="button">Editar</a>    
     <a class="btn btn-primary" href="{% url 'eliminar_rescatado' r.codigo %}">Eliminar</a>
@@ -43,7 +43,7 @@
           <td>
     <a class="btn btn-primary" href="{% url 'adoptar' r.codigo %}"role="button">Adoptar</a>
     </td>
-      {% endif %}
+  <!--    {% endif %}  -->
     </tr>
   {%endfor%}
 
