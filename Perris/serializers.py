@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
-from models import Rescatado, Cliente, Adopcion
+from .models import Rescatado, Cliente, Adopcion
 
 class ClienteSerializer(serializers.ModelSerializer):
 

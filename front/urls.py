@@ -14,6 +14,7 @@ urlpatterns=[
 	url(r'^salir$',views.salir,name="salir"),
     url(r'^registro$',views.registro, name="registro"),
     url('rescatados',views.listar_rescatados, name="rescatados"),
+    url('rescatar',views.agregar_rescatado, name="agregar_rescatado"), 
 ] #+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
