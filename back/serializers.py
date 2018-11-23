@@ -1,8 +1,8 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
-from ../Perris/models import Rescatado, Cliente, Adopcion
+from Perris.models import Rescatado
 
-class ClienteSerializer(serializers.ModelSerializer):
+"""class ClienteSerializer(serializers.ModelSerializer):
 
     run = serializers.CharField(label="RUN")
     password2 = serializers.CharField(style={'input_type': 'password'},label="Confirmar contraseña")
@@ -15,7 +15,7 @@ class ClienteSerializer(serializers.ModelSerializer):
                 'first_name','last_name',
                 'password2',
 				)
-
+"""
 class RescatadoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Rescatado
@@ -24,12 +24,12 @@ class RescatadoSerializer(serializers.ModelSerializer):
                  )
 
 
-
+"""
 class AdopcionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Adopcion
         run=serializers.CharField(required=True,label="RUN")
-        codigo=serializers.CharField(required=True,label="CODIGO")
+        codigo=serializers.CharField(required=True,label="CODIGO")"""
 
     
 

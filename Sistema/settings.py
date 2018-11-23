@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'Perris.apps.PerrisConfig',  
     'corsheaders',  
-    'back.apps.BackConfig'
+    'back.apps.BackConfig',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
