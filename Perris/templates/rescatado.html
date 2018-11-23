@@ -1,5 +1,35 @@
 {%extends 'index.html'%}
 {% block Rescatado %}
+<script>
+    $(document).ready(function() {
+$('#formulario').submit(function(){
+    $.ajax({
+        url:"http://localhost:8000/Libro/add",
+        type:"POST",
+        data:{
+           
+            "nombre":"capitan america",
+            
+            'raza':'marciana',
+            'descripcion':'sfqwfqw',
+            'estado':'disponible',
+            'foto':null 
+                 },
+
+        success: function(){
+          $('#message').html("<h2>AGREGADO</h2>") 
+      }
+          });
+          return false;
+         
+     });
+
+});
+</script>
+<form method="post" id="formulario"></form>
+<input type="button" id="btn-ingresar" value="ingresar" class="ingresar" />
+</form>
+<div id = 'message'>text</div>
 {% load crispy_forms_tags %}
 <h2>Registro de Rescatados</h2>
 

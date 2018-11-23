@@ -15,4 +15,10 @@ class RescatadosView(APIView):
         serializer = RescatadoSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
+
+        else:
+            serializer=RescatadoSerializer()
+            return Response(serializer.data)
         
+
+
