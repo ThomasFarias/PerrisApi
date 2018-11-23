@@ -1,42 +1,31 @@
 {%extends 'index.html'%}
 {% block Rescatado %}
-<script>
-    $(document).ready(function() {
-$('#formulario').submit(function(){
-    $.ajax({
-        url:"http://localhost:8000/back",
-        type:"POST",
-        data:{
-           
-            "nombre":"capitan america",
-            
-            "raza":"marciana",
-            "descripcion":"sfqwfqw",
-            "estado":"disponible",
-            "foto":null 
-                 },
+<h1>AGREGAR RESCATADO</h1>
 
-        success: function(){
-          $('#message').html("<h2>AGREGADO</h2>") 
-      }
-          });
-          return false;
-         
-     });
 
-});
-</script>
-<form method="post" id="formulario"></form>
-<input type="button" id="btn-ingresar" value="ingresar" class="ingresar" />
+<form method="POST" id="formulario">
+    {% csrf_token %}
+<table>
+    <tr>
+        <td>nombre</td><td><input type="text" id="nombre"></td>
+    </tr>
+    <tr>
+        <td>raza</td><td><input type="text" id="raza"></td>
+    </tr>
+    <tr>
+            <td>descripcion</td><td><input type="text" id="descripcion"></td>
+        </tr>
+    
+
+    <tr>
+
+        <td>estado</td><td><input type="text" id="estado"></td>
+    </tr>
+    <tr>
+        <td>foto</td><td><input type="file" id="foto"></td>
+    </tr>
+</table>   
+<input type="submit" id="agregar" value="Agregar"> 
 </form>
-<div id = 'message'>text</div>
-{% load crispy_forms_tags %}
-<h2>Registro de Rescatados</h2>
-
-
-        
-    {% crispy form %}
-
-
 {% endblock %}
 

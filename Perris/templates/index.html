@@ -91,4 +91,19 @@
 		
 		<footer> Desarrollo Web y Mobile  </footer>
 	</body>
+	<script>    
+
+			$("#formulario").submit(function(){
+				alert("agregando?");
+				$.ajax({
+					url:"http://localhost:8000/back/agregar",
+					type:'POST',
+					data: {csrfmiddlewaretoken: '{{ csrf_token }}','nombre': $("#nombre").val(),'raza':$("#raza").val(),'descripcion':$("#descripcion").val(),'estado':$("#estado").val()},
+					success: function (response) {
+						alert("exito al ingresar");
+					}
+				})
+			})
+		   
+		</script>
 </html>
