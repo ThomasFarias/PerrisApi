@@ -10,3 +10,9 @@ class RescatadosView(APIView):
         rescatados=Rescatado.objects.all()
         serializer=RescatadoSerializer(rescatados,many=True)
         return Response(serializer.data)
+    
+    def post(self,request):
+        serializer = RescatadoSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+        
