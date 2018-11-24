@@ -7,6 +7,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.views.generic import CreateView
+from django.shortcuts import redirect
 # Create your views here.
 
 class ClienteCreateView(CreateView):
@@ -67,6 +68,8 @@ def eliminar_rescatado(request,codigo):
     rescatado=Rescatado.objects.get(codigo=codigo)
     if request.method=='POST':
         rescatado.delete()
+        return redirect('rescatados')
+
     return render(request,'eliminar_rescatado.html',{'rescatado':rescatado})
 
 def galeria(request):
