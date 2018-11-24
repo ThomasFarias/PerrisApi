@@ -95,11 +95,13 @@
 		
 			$("#formulario").submit(function(){
 				alert("agregando?");
-				var formData = new FormData($("#foto"));
+				form = $(this).serialize();
+        alert(form);
+			
 				$.ajax({
 					url:"http://localhost:8000/back/agregar",
 					type:'POST',
-					data: {csrfmiddlewaretoken: '{{ csrf_token }}','nombre': $("#nombre").val(),'raza':$("#raza").val(),'descripcion':$("#descripcion").val(),'estado':$("#estado").val(),'foto':formData},
+				
 					success: function (response) {
 						alert("exito al ingresar");
 					}
