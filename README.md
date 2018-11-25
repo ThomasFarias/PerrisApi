@@ -14,3 +14,6 @@ pip install django-progressive-web-app
 
 Corsheaders
 pip install django-cors-headers
+
+Social Auth
+pip install social-auth-app-django
