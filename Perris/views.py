@@ -59,10 +59,10 @@ def modificar_rescatado(request,codigo):
     if request.method=='GET':
         form=FormRescatado(instance=rescatado)
     else:
-        form=FormRescatado(request.POST,instance=rescatado)
+        form=FormRescatado(request.POST,request.FILES,instance=rescatado)
         if form.is_valid():
             form.save()
-    return render(request,'rescatado.html',{'form':form})
+    return render(request,'actualizar.html',{'form':form})
 
 def eliminar_rescatado(request,codigo):
     rescatado=Rescatado.objects.get(codigo=codigo)
