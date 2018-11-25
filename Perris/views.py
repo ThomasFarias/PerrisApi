@@ -38,16 +38,8 @@ def ingresar(request):
     
 
 def agregar_rescatado(request):
-	active_tab = 'tab4'
-	form=FormRescatado(request.POST, request.FILES)
-	if(request.method=='POST'):	
-		if form.is_valid():
-			data=form.cleaned_data
-			regDB=Rescatado(nombre=data.get("nombre"),raza=data.get("raza"),descripcion=data.get("descripcion"),estado=data.get("estado"),foto=data.get("foto"))
-			regDB.save()
-	else:
-		form=FormRescatado()       
-	return render(request,'rescatado.html',{'form':form,'active_tab':active_tab})
+	     
+	return render(request,'rescatado.html')
 
 def listar_rescatados(request):
     active_tab = 'tab5'
