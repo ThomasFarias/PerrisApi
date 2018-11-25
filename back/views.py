@@ -4,6 +4,7 @@ from .serializers import RescatadoSerializer, ClienteSerializer
 from rest_framework.response import Response
 from Perris.models import Rescatado, Cliente
 from django.contrib.auth.models import User
+from django.shortcuts import redirect
 
 # Create your views here.
 class RescatadosView(APIView):
@@ -17,6 +18,7 @@ class RescatadosView(APIView):
         serializer = RescatadoSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
+            
 
         else:
             serializer=RescatadoSerializer()

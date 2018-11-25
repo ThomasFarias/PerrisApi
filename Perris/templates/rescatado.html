@@ -7,13 +7,13 @@
     {% csrf_token %}
 <table>
     <tr>
-        <td>nombre</td><td><input type="text" id="nombre" name="nombre"></td>
+        <td>nombre</td><td><input type="text" id="nombre" name="nombre" required></td>
     </tr>
     <tr>
-        <td>raza</td><td><input type="text" id="raza" name="raza"></td>
+        <td>raza</td><td><input type="text" id="raza" name="raza" required></td>
     </tr>
     <tr>
-            <td>descripcion</td><td><input type="text" id="descripcion" name="descripcion"> </td>
+            <td>descripcion</td><td><input type="text" id="descripcion " name="descripcion" required> </td>
         </tr>
     
 
@@ -26,7 +26,7 @@
           </select></td>
     </tr>
     <tr>
-        <td>foto</td><td><input type="file" id="foto" name="foto"></td>
+        <td>foto</td><td><input type="file" id="foto" name="foto" required></td>
     </tr>
 </table>   
 <input type="submit" id="agregar" value="Agregar" name="agregar"> 

@@ -97,7 +97,7 @@
 	</body>
 	<script>    
 		
-			$("#formulario").submit(function(){
+			$("#formulario").submit(function(e){
 			
 				var data = new FormData(this);			
 			
@@ -108,7 +108,7 @@
 					processData: false, 
        				 contentType: false,
 				
-					success: function (response) {
+					success: function (e) {
 						alert("exito al ingresar");
 					}
 				})
