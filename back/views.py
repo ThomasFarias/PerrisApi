@@ -22,6 +22,14 @@ class RescatadosView(APIView):
             serializer=RescatadoSerializer()
             return Response(serializer.data)
 
+    def put(self,request,pk):
+        rescatado=self.get_object(pk)
+        serializer=RescatadoSerializer(rescatado,data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+
+
 class RegistroView(APIView):
     def get(self,request):
         clientes=Cliente.objects.all()
