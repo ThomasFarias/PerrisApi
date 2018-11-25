@@ -98,14 +98,15 @@
 	<script>    
 		
 			$("#formulario").submit(function(){
-				alert("agregando?");
-				form = $(this).serialize();
-        alert(form);
+			
+				var data = new FormData(this);			
 			
 				$.ajax({
 					url:"http://localhost:8000/back/agregar",
 					type:'POST',
-					data:form,
+					data:data,
+					processData: false, 
+       				 contentType: false,
 				
 					success: function (response) {
 						alert("exito al ingresar");
