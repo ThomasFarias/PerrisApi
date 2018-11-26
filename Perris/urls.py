@@ -24,6 +24,7 @@ urlpatterns=[
 	url(r'^adoptar/(?P<codigo>\d+)/$',views.adoptar,name="adoptar"),
 	url(r'^actualizar/(?P<codigo>\d+)/$',views.modificar_rescatado, name="modificar_rescatado"),	
 	url(r'^eliminar/(?P<codigo>\d+)/$',views.eliminar_rescatado, name="eliminar_rescatado"),
+	url(r'^oauth/', include('social_django.urls', namespace='social'))
 
 ] #+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 

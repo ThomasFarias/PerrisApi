@@ -100,8 +100,13 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 WSGI_APPLICATION = 'Sistema.wsgi.application'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+LOGIN_REDIRECT_URL = 'Perris/inicio'
 
 
+SOCIAL_AUTH_GITHUB_KEY ='ea040cec596d5905b376'
+SOCIAL_AUTH_GITHUB_SECRET ='6086eebd1c5c391d0b711a814c44c8bce3ccdcd3'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
