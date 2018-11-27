@@ -14,7 +14,7 @@ urlpatterns=[
 	url('galeria',views.galeria, name="galeria"), 	
 	url('rescatar',views.agregar_rescatado, name="agregar_rescatado"), 
 
-	url(r'^$',views.inicio, name="inicio"),
+
 	url('^', include('django.contrib.auth.urls')), #necesario para el password reset
 	url(r'^accounts/login/$',views.ingresar,name="login"), #redireccion apropiada, django por defecto te envia a esa url, mat:de donde te envia a usa url? diego:una vez terminas el password reset
 															#django te pone un boton login que redirecciona a ese link.
