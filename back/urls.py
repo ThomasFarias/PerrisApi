@@ -9,7 +9,7 @@ urlpatterns=[
     url('agregar',views.RescatadosView.as_view()),
     url('updat',views.RescatadosView.as_view()),
     url('usrs',views.RegistroView.as_view()),
-    path('',include("Perris.urls")),
+    
 
     
 
